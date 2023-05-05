@@ -1,0 +1,14 @@
+#2023.05.05
+
+# <문제> 
+# https://school.programmers.co.kr/learn/courses/30/lessons/120888
+# <풀이>
+def solution(my_string):
+    집합=set(my_string)
+    result=''
+    for i in my_string:
+        if i in 집합:
+            result += i
+            집합.remove(i)
+    return result
+print(solution('people'))
