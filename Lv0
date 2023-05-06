@@ -12,3 +12,8 @@ def solution(my_string):
             집합.remove(i)
     return result
 print(solution('people'))
+
+#2023.05.06
+
+# <문제>
+# 
