@@ -16,4 +16,11 @@ print(solution('people'))
 #2023.05.06
 
 # <문제>
-# 
+# https://school.programmers.co.kr/learn/courses/30/lessons/120835
+# <풀이>
+e1=[3,76,24]
+e2=sorted(e1,reverse=True)
+result=[e2.index(e1[0]), 
+        e2.index(e1[1]),
+        e2.index(e1[2]),]
+result
