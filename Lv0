@@ -34,3 +34,19 @@ for i in range (101):
     if i%3==0 and i%5==0:
         result+= i
 print(result)
+
+#2023.05.12
+# <문제>
+# https://school.programmers.co.kr/learn/courses/30/lessons/181952
+# <풀이>
+str = input()
+print(str)
+# <풀이2>
+str = input()
+
+while True:
+    if len(str) >= 1 and len(str) <= 100000 and str != ' ':
+        print(str)
+        break
+    else:
+        continue
