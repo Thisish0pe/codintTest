@@ -38,7 +38,7 @@ print(result)
 #2023.05.12
 # <문제>
 # https://school.programmers.co.kr/learn/courses/30/lessons/181952
-# <풀이>
+# <풀이1>
 str = input()
 print(str)
 # <풀이2>
@@ -50,3 +50,15 @@ while True:
         break
     else:
         continue
+
+#<문제>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181951?language=python3
+#<풀이1>
+a,b = map(int, input().strip().split())
+print(f'a={a}\nb={b}')
+#<풀이2>
+input_str = input().strip()
+input_list = input_str.split(' ')
+a = int(input_list[0])
+b = int(input_list[1])
+print(f"a = {a}\nb = {b}")
