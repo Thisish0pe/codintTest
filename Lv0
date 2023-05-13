@@ -1,6 +1,6 @@
 #2023.05.05
 
-# <문제> 
+# <문제 1 > 
 # https://school.programmers.co.kr/learn/courses/30/lessons/120888
 # <풀이>
 def solution(my_string):
@@ -15,7 +15,7 @@ print(solution('people'))
 
 #2023.05.06
 
-# <문제>
+# <문제 2 >
 # https://school.programmers.co.kr/learn/courses/30/lessons/120835
 # <풀이>
 e1=[3,76,24]
@@ -26,7 +26,7 @@ result=[e2.index(e1[0]),
 result
 
 #2023.05.07
-# <문제> 
+# <문제 3 > 
 # https://codingdojang.com/scode/350?answer_mode=hide
 # <풀이>
 result=0
@@ -36,12 +36,12 @@ for i in range (101):
 print(result)
 
 #2023.05.12
-# <문제>
+# <문제 4 >
 # https://school.programmers.co.kr/learn/courses/30/lessons/181952
-# <풀이1>
+# <풀이 1 >
 str = input()
 print(str)
-# <풀이2>
+# <풀이 2 >
 str = input()
 
 while True:
@@ -51,14 +51,31 @@ while True:
     else:
         continue
 
-#<문제>
+#<문제 5 >
 #https://school.programmers.co.kr/learn/courses/30/lessons/181951?language=python3
-#<풀이1>
+#<풀이 1 >
 a,b = map(int, input().strip().split())
 print(f'a={a}\nb={b}')
-#<풀이2>
+#<풀이 2 >
 input_str = input().strip()
 input_list = input_str.split(' ')
 a = int(input_list[0])
 b = int(input_list[1])
 print(f"a = {a}\nb = {b}")
+
+# 2023.05.13
+#<문제 6 >
+#https://school.programmers.co.kr/learn/courses/30/lessons/181950
+#<풀이 1 >
+a, b = input().strip().split(' ')
+b = int(b)
+result = a * b
+print (result)
+#<풀이 2 >
+a, b = input().strip().split(' ')
+for i in range(int(b)):
+    result(a, end = '')
+print(result)
+
+#<문제 7 >
+#
