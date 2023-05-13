@@ -90,3 +90,10 @@ for i in str:
 print(chan_str)
 #<풀이 2 >
 print(input('Plese fill in the text').swapcase())
+
+#<문제 8 >
+#https://school.programmers.co.kr/learn/courses/30/lessons/181948
+#<풀이 1>
+print(r'!@#$%^&*(\'"<>?:;')
+#<풀이 2>
+print('!@#$%^&*(\\\'\"<>?:;')
