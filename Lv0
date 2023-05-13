@@ -78,4 +78,15 @@ for i in range(int(b)):
 print(result)
 
 #<문제 7 >
-#
+#https://school.programmers.co.kr/learn/courses/30/lessons/181949
+#<풀이 1 >
+str = input('Please fill in the text')
+chan_str = ""
+for i in str:
+    if i.islower():
+        chan_str += i.upper()
+    else:
+        chan_str += i.lower()
+print(chan_str)
+#<풀이 2 >
+print(input('Plese fill in the text').swapcase())
