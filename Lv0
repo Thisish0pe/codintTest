@@ -97,3 +97,13 @@ print(input('Plese fill in the text').swapcase())
 print(r'!@#$%^&*(\'"<>?:;')
 #<풀이 2>
 print('!@#$%^&*(\\\'\"<>?:;')
+
+#2023.05.15
+#<문제 9>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181947
+#<풀이 1>
+a,b = map(int, input(). strip().split(' '))
+print('{}+{}={}'.format(a,b,a+b))
+#<풀이 2>
+a,b = map(int,input().strip().split(' '))
+print(f'{a}+{b}={a+b}')
