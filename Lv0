@@ -107,3 +107,12 @@ print('{}+{}={}'.format(a,b,a+b))
 #<풀이 2>
 a,b = map(int,input().strip().split(' '))
 print(f'{a}+{b}={a+b}')
+
+#<문제 10>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181946?language=python3
+#<풀이 1>
+s = input()
+s = s.replace(' ', '')
+print(s)
+#<풀이 2>
+print(''.join(input().strip().split(' ')))
