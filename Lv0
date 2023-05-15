@@ -116,3 +116,24 @@ s = s.replace(' ', '')
 print(s)
 #<풀이 2>
 print(''.join(input().strip().split(' ')))
+
+#<문제 11>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120849
+#<풀이 1>
+def solution(my_string):
+    return my_string.replace('a','').replace('e','').replace('i','').replace('o','').replace('u','')
+print(solution('bus'))
+#<풀이 2>
+def solution(my_string):
+    string='aeiou'
+    for i in string:
+        my_string = my_string.replace(i,'')
+    return my_string
+print(solution('mayo'))
+#<풀이 3>
+import re
+
+def solution(my_string):
+    return re.sub(r"[aeiou]","",my_string)
+    
+print(solution('hahaha'))
