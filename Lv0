@@ -137,3 +137,34 @@ def solution(my_string):
     return re.sub(r"[aeiou]","",my_string)
     
 print(solution('hahaha'))
+
+#<문제 12>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120851
+#<풀이 1>
+import re
+
+def solution(data):
+    p = re.compile(r'([^a-zA-Z])')
+    matches = p.findall(data)
+    result = sum([int(match) for match in matches])
+    return result
+
+data="aAb1B2cC34oOp"
+solution(data)
+#<풀이 2>
+def solution (data):
+    return sum([int(i) for i in data if i.isdigit()])
+
+data="aAb1B2cC34oOp"
+solution(data)
+#<풀이 3>
+def soultion (data):
+    return sum(map(int,filter(lambda x:x.isdigit(), data)))
+
+data="aAb1B2cC34oOp"
+solution(data)
+#<풀이 4>
+import re
+
+def solution(my_string):
+    return sum([int(i) for i in re.sub('[^1-9]', '', my_string)])
