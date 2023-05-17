@@ -238,3 +238,88 @@ sub = "lloWorl"
 idx = 2
 result = solution(s, sub, idx)
 print(result)
+
+#<문제 16>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120807
+#<풀이 1>
+def solution (num1, num2):
+    if num1 == num2:
+        return 1
+    else:
+        return -1
+
+print(solution (2,3))
+#<풀이 2>
+def solution (num1,num2):
+    return 1 if num1 == num2 else -1
+    
+#<문제 17>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120583
+#<풀이 1>
+def solution(array, n):
+    return array.count(n)
+#<풀이 2>
+from collections import Counter
+
+def solution (array, n):
+    value = Counter(array).get(n)
+    return 0 if value == None else value
+    
+#<문제 18>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120585
+#<풀이 1>
+li = [149, 180, 192, 170]
+height = 167
+s = []
+for i in li:
+    if i < height:
+        s.append(i)
+        print(len(s))
+#<풀이 2>
+array = [149, 180, 192, 170]
+hight = 167
+l=[i for i in array if i > hight]
+len(l)
+
+#<문제 19>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120906
+#<풀이 1>
+num = 1234
+s = sum([int(i) for i in str(num)])
+s
+#<풀이 2>
+num = 1234
+s =[]
+for i in str(num):
+    s.append(int(i))
+print(sum(s))
+
+#<문제 20>
+#https://school.programmers.co.kr/learn/courses/30/lessons/120844
+#<풀이 1>
+numbers = [1, 2, 3]
+direction = 'right'
+
+def solution(numbers, direction):
+    if direction == 'right':
+        result = [numbers[-1]] + numbers[:-1]
+    return result
+
+result = solution(numbers, direction)
+print(result)
+#<풀이 2>
+from collections import deque
+
+def solution(numbers, direction):
+    numbers = deque(numbers)
+    if direction == 'right':
+        direction = 1
+    if direction == 'left':
+        direction = -1
+    numbers.rotate(direction)
+    return list(numbers)
+
+numbers = [1, 2, 3, 4]
+direction = 'right'
+result = solution(numbers, direction)
+print(result)
