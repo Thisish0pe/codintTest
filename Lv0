@@ -370,3 +370,38 @@ print(solution('love', 3))
 
 #<문제 24>
 #
+#<풀이 1>
+def solution(a,b):
+    if str(a)+str(b) > str(b)+str(a):
+        return str(a) + str(b)
+    else:
+        return str(b) + str(a)
+
+a=9
+b=91
+print(solution(a,b))
+#<풀이 2>
+def solution(a,b):
+    return int(max(f'{a}{b}',f'{b}{a}'))
+
+a=9
+b=91
+print(solution(a,b))
+
+#<문제 25>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181938
+#<풀이 1>
+def solution(a,b):
+    ab = str(a)+str(b)
+    ab = int(ab)
+    ab2 = int(2*a*b)
+
+    if ab > ab2:
+        return ab
+    elif ab < ab2:
+        return ab2
+    else:
+        return ab
+#<풀이 2>
+def solution(a,b):
+    return max(int(str(a))+str(b), 2*a*b)
