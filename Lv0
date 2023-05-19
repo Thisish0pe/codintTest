@@ -436,3 +436,16 @@ def solution(num, n, m):
         return 0
         
 print(solution (60, 2, 3))
+
+#2023.05.20
+#<문제 28>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181935
+#<풀이 1>
+def solution(n):
+    if n % 2 == 0:
+        return [i**2 for i in range(2, n+1, 2)]
+    else:
+        return sum(range(1, n+1, 2))
+#<풀이 2>
+def solution(n):
+    return sum(i**(2-i%2) for i in range(n+1) if n % 2 == i % 2)
