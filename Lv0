@@ -449,3 +449,35 @@ def solution(n):
 #<풀이 2>
 def solution(n):
     return sum(i**(2-i%2) for i in range(n+1) if n % 2 == i % 2)
+
+#2023. 05. 21
+#<문제 29>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181934
+#<풀이1>
+def solution(ineq, eq, n, m):
+    if ineq == "<" and eq == "=":
+        return int(n <= m)
+    elif ineq == "<" and eq == "!":
+        return int(n < m)
+    elif ineq == ">" and eq == "=":
+        return int(n >= m)
+    elif ineq == ">" and eq == "!":
+        return int(n > m)
+    else:
+        return 0
+
+#<문제 30>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181933
+#<풀이 1>
+def solution (a, b, flag):
+    if flag == True:
+        result = a+b
+        return result
+    else:
+        result = a-b
+        return result
+
+print(solution(-4,7,True))
+#<풀이 2>
+def solution(a, b, flag):
+    return a + b if flag else a - b
