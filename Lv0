@@ -508,3 +508,20 @@ def solution (code):
     return result
 
 print(solution('abc1abc1abc'))
+
+#<문제 31>
+# https://school.programmers.co.kr/learn/courses/30/lessons/181931
+#<풀이 1>
+def solution (a, d, included):
+    total = 0
+    for i in range(len(included)):
+        if included[i]:
+            term += a + (i *d)
+            total += term
+    return total
+#<풀이 2>
+def solution (a, d, included):
+    answer = 0
+    for i in range(len(included)):
+        answer += (a + i *d) * included[i]
+    return answer
