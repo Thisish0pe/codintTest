@@ -481,3 +481,30 @@ print(solution(-4,7,True))
 #<풀이 2>
 def solution(a, b, flag):
     return a + b if flag else a - b
+
+# 2023.05.22
+# <문제 30>
+# https://school.programmers.co.kr/learn/courses/30/lessons/181932
+# <풀이 1>
+def solution (code):
+    mode = 0
+    result=''
+    for i in range(len(code)):
+        if mode == 0:
+            if code[i] != '1':
+                if i % 2 == 0:
+                    result += code[i]
+            else:
+                mode = 1
+        elif mode == 1:
+            if code[i] != '1':
+                if i % 2 == 1:
+                    result += code[i]
+            else: 
+                mode = 0
+
+    if result =='':
+        reust = 'EMPTY'
+    return result
+
+print(solution('abc1abc1abc'))
