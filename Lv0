@@ -525,3 +525,25 @@ def solution (a, d, included):
     for i in range(len(included)):
         answer += (a + i *d) * included[i]
     return answer
+
+#2023.05.23
+#<문제 32>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181930
+#<풀이 1>
+def solution(a, b, c):
+    check=len(set([a,b,c]))
+    if check==1:
+        return 3*a*3*(a**2)*3*(a**3)
+    elif check==2:
+        return (a+b+c)*(a**2+b**2+c**2)
+    else:
+        return (a+b+c)
+#<풀이 2>
+def solution(a, b, c):
+    check=len(set([a,b,c]))
+    if check==1:
+        return 3*a*3*(a**2)*3*(a**3)
+    elif check==2:
+        return (a+b+c)*(a**2+b**2+c**2)
+    else:
+        return (a+b+c)
