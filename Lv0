@@ -547,3 +547,19 @@ def solution(a, b, c):
         return (a+b+c)*(a**2+b**2+c**2)
     else:
         return (a+b+c)
+
+#2023.05.24
+#<문제 33>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181929?language=python3
+#<풀이 1>
+import math
+def solution (num_list):
+    if sum(num_list)**2 > math.prod(num_list):
+        return 1
+    else: 
+        return 0
+#<풀이 2>
+def solution (num_list):
+    s = sum(num_list)**2
+    m = eval('*'.join([str(i) for i in num_list]))
+    return 1 if s > m else 0
