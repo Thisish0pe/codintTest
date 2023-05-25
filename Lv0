@@ -482,6 +482,8 @@ print(solution(-4,7,True))
 def solution(a, b, flag):
     return a + b if flag else a - b
 
+## 조건문
+## Lv0
 # 2023.05.22
 # <문제 30>
 # https://school.programmers.co.kr/learn/courses/30/lessons/181932
@@ -563,3 +565,45 @@ def solution (num_list):
     s = sum(num_list)**2
     m = eval('*'.join([str(i) for i in num_list]))
     return 1 if s > m else 0
+    
+#2023.05.25
+#<문제 34>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181928
+#<풀이 1>
+def solution (num_list):
+    li1=[]
+    li2=[]
+    for i in num_list:
+        if i%2 == 0:
+            li1.append (str(i))
+        elif i%2 == 1:
+            li2.append (str(i))
+    result = int(''.join(li1)) + int(''.join(li2))
+    return result
+#<풀이 2>
+def solution (num_list):
+    a = ''
+    b = ''
+    if i % 2 == 0:
+        a += str(i)
+    else:
+        b += str(i)
+    return int(a) + int(b)
+    
+## 조건문 반복문
+## Lv0
+#2023.05.25
+#<문제 35>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181927
+#<풀이 1>
+def solution (num_list):
+    for i in range(len(num_list)):
+        if num_list[-1] > num_list[-2]:
+            num_list.append(num_list[-1] - num_list[-2])
+        else:
+            num_list.append(num_list[-1]*2)
+        return num_list
+#<풀이 2>
+def solution (l):
+    return (l[-1]-l[-2] if l[-1] > l[-2] else l[-1] * 2)
+      
