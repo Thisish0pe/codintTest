@@ -608,6 +608,7 @@ def solution (l):
     return (l[-1]-l[-2] if l[-1] > l[-2] else l[-1] * 2)
       
 #2023.05.28
+#<문제 36>
 #https://school.programmers.co.kr/learn/courses/30/lessons/181926
 #<풀이 1>
 def solution (n, control):
@@ -626,3 +627,23 @@ def solution (n, control):
 def solution(n, control):
     key = dict(zip(['w','s','d','a'], [1,-1,10,-10]))
     return n + sum([key[c] for c in control])
+
+#<문제 37>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181925
+#<풀이 1>
+def solution (numLog):
+    key = {1:'w', -1:'s', 10:'d', -10:'a'}
+    control = []
+    for i in range(1, len(numLog)):
+        diff = numLog[i] - numLog[i-1]
+        control.append (key[diff])
+    return ''.join(control)
+
+#<풀이 2>
+def solution (numLog):
+    key = dict(zip([1, -1, 10, -10], ['w', 's', 'd', 'a']))
+    control = []
+    for i in range (1, len(numLog)):
+        diff = numLog[i] - numLog[i-1]
+        control.append(key[diff])
+    return ''.join(control)
