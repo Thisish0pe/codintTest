@@ -687,3 +687,20 @@ def solution(arr, queries):
             if i % k == 0:
                 arr[i] += 1
     return arr
+#2023.06.01
+#<문제 41>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181921
+#<풀이 1>
+def solution(l, r):
+    result =[]
+    for i in range(l, r+1):
+        if all(digit in {'5', '0'} for digit in str(num)):
+            result.append(num)
+        return result if result else [-1]
+#<풀이 2>
+def solution(l, r):
+    answer = []
+    for num in range(l, r + 1):
+        if not set(str(num)) - set(['0', '5']):
+            answer.append(num)
+    return answer if answer else [-1]
