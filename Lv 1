@@ -1,0 +1,28 @@
+# 탐욕법 (Greedy) 알고리즘
+# 2023. 06.03
+# <문제 1>
+# https://school.programmers.co.kr/learn/courses/30/lessons/42862
+# <풀이 1>
+def solution(n, lost, reserve):
+    lost_del = set(lost) - set(reserve) #교복을 잃어버렸지만 여분의 교복이 있는 학생들은 잃어버린 학생으로 치지 않음
+    reserve_del = set(reserve) - set(lost) #교복을 잃어버렸지만 여분의 교복을 가지고 있는 학생들은 여분의 교복을 가진 학생으로만 계산됩니다. 이 단계에서는 여분의 교복을 가진 학생들이 교복을 잃어버린 상태가 아니라는 것을 보장
+
+    for student in reserve_del:
+        if student - 1 in lost_del:
+            lost_del.remove(student - 1)
+        elif student + 1 in lost_del:
+            lost_del.remove(student + 1)
+    result = n - len(lost_del)
+    return result
+#<풀이 2>
+def solution(n, lost, reserve):
+    _reserve = [r for r in reserve if r not in lost]
+    _lost = [l for l in lost if l not in reserve]
+    for r in _reserve:
+        f = r - 1
+        b = r + 1
+        if f in _lost:
+            _lost.remove(f)
+        elif b in _lost:
+            _lost.remove(b)
+    return n - len(_lost)
