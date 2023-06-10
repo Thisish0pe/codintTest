@@ -800,3 +800,27 @@ def solution(a, b, c, d):
 
     answer = 0
     return answer
+    
+#2023.06.09
+#<문제 47>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181915
+#<풀이 1>
+def solution(my_string, index_list):
+    my_string = list(my_string)
+    result=''
+    for i in index_list:
+        result += my_string[i]
+    return result
+    
+#2023.06.10
+#<문제 48>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181914
+#<풀이 1>
+def solution (number):
+    digit = [int(i) for i in str(number)]
+    digit_sum = sum(digit)
+    result = digit_sum % 9 
+return result
+#<풀이 2>
+def solution (number):
+    return sum(list(map(int, number))) % 9
