@@ -824,3 +824,39 @@ return result
 #<풀이 2>
 def solution (number):
     return sum(list(map(int, number))) % 9
+    
+#2023.06.11
+#<문제 49>
+#
+#<풀이 1>
+def solution (my_string, queries):
+    for query in queries:
+        start = query[0]
+        end = query[1]
+        my_string = my_string[:start] + my_string[start:end+1][::-1] + my_string[end+1:]
+    return my_string
+#<풀이 2>
+def solution (my_string, queries):
+    answer = list(my_string)
+    for s,e in queries:
+        answer[s:e+1] = answer[s:e+1][::-1]
+    return ''.join(answer)
+#<풀이 3>
+def solution (my_string, queries):
+    for s,e in queries:
+        my_string = my_string[:s] + my_string[s:e+1][::-1] + my_string[e+1:]
+    return my_string
+    
+#<문제 50>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181912
+#<풀이 1>
+def solution(intStrs, k, s, l):
+    result = []
+    for intStr in intStrs:
+        if int(intStr[s:s+l]) > k:
+            result.append(int(intStr[s:s+l]))
+    return result
+    
+#<풀이 2>
+def solution(intStrs, k, s, l):
+    return [int(intStr[s:s+l]) for intStr in intStrs if int(intStr[s:s+l]) > k]
