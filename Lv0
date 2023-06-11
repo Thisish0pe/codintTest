@@ -860,3 +860,32 @@ def solution(intStrs, k, s, l):
 #<풀이 2>
 def solution(intStrs, k, s, l):
     return [int(intStr[s:s+l]) for intStr in intStrs if int(intStr[s:s+l]) > k]
+    
+#<문제 51>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181911
+#<풀이 1>
+def solution(my_strings, parts):
+    result = ''
+    for i,(s,e) in enumerate(parts):
+        my_string = my_strings[i]
+        result += my_string[s:e+1]
+    return result
+
+#<문제 52>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181910
+#<풀이 1>
+def solution(my_string, n):
+    return my_string[-n:]
+    
+#<문제 53>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181909
+#<풀이 1>
+def solution (my_string):
+    result = []
+    for i in range(len(my_string)):
+        result.append(my_string[i:])
+    return sorted(result)
+#<풀이 2>
+def solution (my_string):
+    result = [my_string[i:] for i in range(len(my_string))]
+    return sorted(result)
