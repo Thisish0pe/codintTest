@@ -911,3 +911,27 @@ def solution(my_string, is_suffix):
 #<풀이 1>
 def solution(my_string, n):
     return my_string[:n]
+
+#2023.06.13
+#<문제 56>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181906
+#<풀이 1>
+def solution(my_string, is_prefix):
+    if my_string[:len(is_prefix)] == is_prefix : return 1
+    return 0
+#<풀이 2>
+def solution(my_string, is_prefix):
+    return int(my_string.startwith(is_prefix))
+#<풀이 3>
+def solution (my_string, is_prefix):
+    prefixes = [my_string[:i] for i in range(len(my_string))]
+    if is_prefix in prefixes:
+        return 1
+    else:
+        return 0
+
+#<문제 57>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181905
+#<풀이 1>
+def solution(my_string, s, e):
+    return my_string[:s] + my_string[s:e+1][::-1] + my_string[e+1:]
