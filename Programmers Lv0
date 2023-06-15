@@ -958,3 +958,16 @@ def solution(my_string, m, c):
 #<풀이 1>
 def solution (q, r, code):
     return code[r::q]
+
+#2023.06.15
+#<문제 60>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181902
+#<풀이 1>
+def solution(my_string):
+    result = [0]*52
+    for i in my_string:
+        if i.isupper():
+            result[ord(i)-65]+=1
+        else:
+            result[ord(i)-71]+=1
+    return result
