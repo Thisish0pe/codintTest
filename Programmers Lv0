@@ -989,3 +989,32 @@ def solution(n, k):
         if i % k == 0:
             answer.append(i)
     return answer
+
+#2023. 06. 19
+#<문제 62>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181900
+#<풀이 1>
+def solution(my_string, indices):
+    result = ''
+    for i, char in enumerate(my_string):
+        if i not in indices:
+            result += char
+    return result
+#<풀이 2>
+def solution(my_string, indices):
+    answer = ''
+    for i in range(len(my_string)):
+        if i not in indices:answer+=my_string[i]
+    return answer
+
+#<문제 63>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181899
+#<풀이 1>
+def solution(start, end):
+    answer = []
+    for i in range(end, start+1):
+        answer.append(i)
+    return answer[::-1]
+#<풀이 2>
+def solution(start, end):
+    return [i for i in range(start,end-1,-1)]
