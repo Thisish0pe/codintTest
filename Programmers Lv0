@@ -1018,3 +1018,38 @@ def solution(start, end):
 #<풀이 2>
 def solution(start, end):
     return [i for i in range(start,end-1,-1)]
+
+#2023.06.20
+#<문제 64>
+#<풀이 1>
+def solution(arr, idx):
+    for i in range(idx, len(arr)):
+        if arr[i] == 1:
+            return i
+    return -1
+#<풀이 2>
+def solution(arr, idx):
+    answer = 0
+    try:
+        answer = arr.index(1, idx)
+    except:
+        answer = -1
+
+    return answer
+#<문제 65>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181897
+#<풀이 1>
+def solution(n, slicer, num_list):
+    a, b, c = slicer
+    if n == 1:
+        return num_list[0:b+1]
+    elif n == 2:
+        return num_list[a:]
+    elif n == 3:
+        return num_list[a:b+1]
+    else:
+        return num_list[a:b+1:c]
+#<풀이 2>
+def solution(n, slicer, num_list):
+    a, b, c = slicer
+    return [num_list[:b + 1], num_list[a:], num_list[a:b + 1], num_list[a:b + 1:c]][n - 1]
