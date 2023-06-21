@@ -1053,3 +1053,13 @@ def solution(n, slicer, num_list):
 def solution(n, slicer, num_list):
     a, b, c = slicer
     return [num_list[:b + 1], num_list[a:], num_list[a:b + 1], num_list[a:b + 1:c]][n - 1]
+
+#2023.06.21
+#<문제 66>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181896
+#<풀이 1>
+def solution(num_list):
+    for i in range(len(num_list)):
+        if num_list[i] < 0 :
+            return i
+    return -1
