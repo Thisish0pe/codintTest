@@ -1,5 +1,6 @@
 ##Lv 1
 
+# IS_NULL
 # 2023.06.28
 #<문제 _ 나이 정보가 없는 회원 수 구하기>
 #https://school.programmers.co.kr/learn/courses/30/lessons/131528
@@ -17,6 +18,15 @@ SELECT
 FROM ANIMAL_INS
 WHERE INTAKE_CONDITION != 'Aged'
 ORDER BY ANIMAL_ID
+
+# SUM, MAX, MIN
+# 2023.07.02
+#<문제 - 가장 비싼 상품 구하기>
+#https://school.programmers.co.kr/learn/courses/30/lessons/131697
+#<풀이>
+select 
+    max(price) as MAX_PRICE
+from product
 
 ##Lv 2
 
