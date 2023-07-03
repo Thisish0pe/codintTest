@@ -1,7 +1,4 @@
-##Lv 1
-
 # IS_NULL
-# 2023.06.28
 #<문제 _ 나이 정보가 없는 회원 수 구하기>
 #https://school.programmers.co.kr/learn/courses/30/lessons/131528
 #<풀이>
@@ -20,13 +17,19 @@ WHERE INTAKE_CONDITION != 'Aged'
 ORDER BY ANIMAL_ID
 
 # SUM, MAX, MIN
-# 2023.07.02
+
 #<문제 - 가장 비싼 상품 구하기>
 #https://school.programmers.co.kr/learn/courses/30/lessons/131697
 #<풀이>
 select 
     max(price) as MAX_PRICE
 from product
+
+#<문제 - 동물 수 구하기>
+#https://school.programmers.co.kr/learn/courses/30/lessons/59406
+#<풀이>
+select count(animal_id) as count
+from animal_ins
 
 ##Lv 2
 
@@ -56,3 +59,4 @@ SELECT *
 FROM FOOD_PRODUCT
 ORDER BY PRICE DESC
 LIMIT 1
+
