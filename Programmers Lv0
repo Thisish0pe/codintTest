@@ -1094,3 +1094,15 @@ def solution(arr):
             end = i
 
     return arr[start:end + 1]
+
+#2023.07.03
+#<문제 69>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181893
+#<풀이 1>
+def solution(arr, query):
+    for k, q in enumerate(query):
+        if k % 2 == 0:
+            arr = arr[:q + 1]
+        else:
+            arr = arr[q:]
+    return arr
