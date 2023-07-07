@@ -1114,3 +1114,12 @@ def solution(arr, query):
 def solution(num_list, n):
     answer = num_list[n-1:]
     return answer
+
+
+#2023.07.07
+#<문제 71>
+#https://school.programmers.co.kr/learn/courses/30/lessons/181891
+#<풀이 1>
+def solution(num_list, n):
+    answer = num_list[n:] + num_list[:n]
+    return answer
