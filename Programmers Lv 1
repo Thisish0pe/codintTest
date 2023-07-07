@@ -1,5 +1,4 @@
-# 탐욕법 (Greedy) 알고리즘
-# 2023. 06.03
+### 탐욕법 (Greedy) 알고리즘
 # <문제 1>
 # https://school.programmers.co.kr/learn/courses/30/lessons/42862
 # <풀이 1>
@@ -27,8 +26,7 @@ def solution(n, lost, reserve):
             _lost.remove(b)
     return n - len(_lost)
 
-# 스택과 큐 알고리즘
-# 2023.06.15
+### 스택과 큐 알고리즘
 # <문제 2>
 # https://school.programmers.co.kr/learn/courses/30/lessons/12906
 # <풀이 1>
@@ -38,3 +36,26 @@ def solution(arr):
         if len(answer) == 0 or i != answer[-1]:
             answer.append(i)
     return answer
+
+## 달리기 경주
+# https://school.programmers.co.kr/learn/courses/30/lessons/178871
+# <풀이 1> - 시간 초과
+def solution(players, callings):
+    for calling in callings:
+        idx = players.index(calling)
+        players[idx] , players[idx-1] =  players[idx-1] , players[idx]
+    return players
+# <풀이 2> - 정답
+def solution(players, callings):
+    player_dict = {player:rank for rank,player in enumerate(players)}
+    rank_dict = {rank:player for rank,player in enumerate(players)}
+
+    for calling in callings:
+        rank = player_dict[calling] # 키 값이 이름이기 때문에 이름을 인덱싱하면 밸류값인 순위 추출
+
+        # 순서 바꾸기
+        player_dict[rank_dict[rank-1]], player_dict[rank_dict[rank]] = player_dict[rank_dict[rank]], player_dict[rank_dict[rank-1]]
+        rank_dict[rank-1], rank_dict[rank] = rank_dict[rank], rank_dict[rank-1]
+
+    # 다시 리스트로 변환
+    return list(rank_dict.values())
