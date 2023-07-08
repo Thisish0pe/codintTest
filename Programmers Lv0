@@ -1,3 +1,5 @@
+### 코딩테스트 기초
+
 #2023.05.05
 
 # <문제 1 > 
@@ -1122,4 +1124,20 @@ def solution(num_list, n):
 #<풀이 1>
 def solution(num_list, n):
     answer = num_list[n:] + num_list[:n]
+    return answer
+
+### 코딩테스트 입문
+
+## .replace()
+# <문제 - 옹알이(1)>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120956
+# <풀이>
+def solution(babbling):
+    answer = 0
+    word = ["aya","ye","woo","ma"]
+    for i in babbling:
+        for j in word:
+            i = i.replace(j,'!',1)
+        if i.replace('!','') == '':
+            answer += 1
     return answer
