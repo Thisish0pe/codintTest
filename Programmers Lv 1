@@ -37,9 +37,10 @@ def solution(arr):
             answer.append(i)
     return answer
 
+### Dictionary (딕셔너리)
 ## 달리기 경주
 # https://school.programmers.co.kr/learn/courses/30/lessons/178871
-# <풀이 1> - 시간 초과
+# <풀이 1> - 실패코드 : 시간 초과
 def solution(players, callings):
     for calling in callings:
         idx = players.index(calling)
@@ -59,3 +60,18 @@ def solution(players, callings):
 
     # 다시 리스트로 변환
     return list(rank_dict.values())
+
+## 추억 점수
+# https://school.programmers.co.kr/learn/courses/30/lessons/176963
+# <풀이>
+def solution(name, yearning, photo):
+    name_dict = {n:y for n,y in zip(name, yearning)} # name_dict = dict(zip(name,yearing))
+    answer_array = []
+    for i in range(len(photo)):
+        answer_sum = 0
+        for j in photo[i]:
+            if j in name_dict:
+                count_memory = name_dict[j] # 위의 주석대로하면 이 부분 삭제 가능
+                answer_sum += count_memory
+        answer_array.append(answer_sum)
+    return answer_array
