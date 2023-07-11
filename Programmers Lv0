@@ -1141,3 +1141,20 @@ def solution(babbling):
         if i.replace('!','') == '':
             answer += 1
     return answer
+
+## indexing
+# <문제 - 다음에 올 숫자>
+#
+# <풀이 1>
+def solution(common):
+    if common[1] - common[0] == common[-1] - common[-2]:
+        return common[-1] + (common[1] - common[0])
+    else:
+        return common[-1] * (common[-1] // common[-2])
+# <풀이 2>
+def solution(common):
+    answer = 0
+    a,b,c = common[:3]
+    if (b-a) == (c-b):
+        return common[-1]+(b-a)
+    return common[-1] * (b//a)
