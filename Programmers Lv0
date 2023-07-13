@@ -1158,3 +1158,9 @@ def solution(common):
     if (b-a) == (c-b):
         return common[-1]+(b-a)
     return common[-1] * (b//a)
+
+# <문제 - 종이자르기>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120922
+# <풀이>
+def solution(M, N):
+    return (M-1) + ((N-1) * M)
