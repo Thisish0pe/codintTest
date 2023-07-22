@@ -1196,3 +1196,10 @@ def solution (a, b):
     return -1
 # <풀이 2>
 solution=lambda a,b:(b*2).find(a)
+
+# <문제 - 잘라서 배열로 저장하기>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120913
+# <풀이>
+def solution(my_str, n):
+    result = [my_str[i:i + n] for i in range(0, len(my_str), n)]
+    return result
