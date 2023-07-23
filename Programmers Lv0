@@ -1203,3 +1203,16 @@ solution=lambda a,b:(b*2).find(a)
 def solution(my_str, n):
     result = [my_str[i:i + n] for i in range(0, len(my_str), n)]
     return result
+
+# map
+# <문제 -7의 개수>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120912
+# <풀이 1>
+def solution(array):
+    return ''.join(map(str, array)).count('7')
+# <풀이 2>
+def solution(array):
+    answer = ""
+    for i in array:
+        answer += str(i)
+    return answer.count("7")
