@@ -1216,3 +1216,12 @@ def solution(array):
     for i in array:
         answer += str(i)
     return answer.count("7")
+
+# <문제 - 세균 증식>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120910
+# <풀이>
+def solution(n, t):
+    answer = n
+    for i in range(t):
+        answer = answer * 2
+    return answer
