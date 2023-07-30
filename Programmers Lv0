@@ -1225,3 +1225,9 @@ def solution(n, t):
     for i in range(t):
         answer = answer * 2
     return answer
+
+# <문제 - 제곱 수 판별하기>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120909
+# <풀이>
+def solution(n):
+    return 1 if (n ** 0.5) % 1 == 0 else 2
