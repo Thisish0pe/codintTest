@@ -1231,3 +1231,9 @@ def solution(n, t):
 # <풀이>
 def solution(n):
     return 1 if (n ** 0.5) % 1 == 0 else 2
+
+# <문제 - 문자열안에 문자열>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120908
+# <풀이>
+def solution(str1, str2):
+    return 1 if str2 in str1 else 2
