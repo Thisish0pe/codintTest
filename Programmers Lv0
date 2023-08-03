@@ -1237,3 +1237,15 @@ def solution(n):
 # <풀이>
 def solution(str1, str2):
     return 1 if str2 in str1 else 2
+
+# <문제 - 자릿수 더하기>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120906
+# <풀이 1>
+def solution(n):
+    answer = 0
+    for digit in str(n):
+        answer += int(digit)
+    return answer
+# <풀이 2>
+def solution(n):
+    return sum(int(i) for i in str(n))
