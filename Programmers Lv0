@@ -1259,3 +1259,9 @@ def solution(n, numlist):
         if i % n == 0:
             answer.append(i)
     return answer
+# <문제 - 숫자찾기>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120904
+# <풀이>
+def solution(num, k):
+    a = str(num).find(str(k))
+    return (a if a == -1 else a+1)
