@@ -1265,6 +1265,7 @@ def solution(n, numlist):
 def solution(num, k):
     a = str(num).find(str(k))
     return (a if a == -1 else a+1)
+
 # <문제 - 배열의 유사도>
 # https://school.programmers.co.kr/learn/courses/30/lessons/120903
 # <풀이>
@@ -1274,3 +1275,9 @@ def solution(s1, s2):
         if i in s2:
             answer += 1
     return answer
+
+# <문제 - 가장 큰 수 찾기>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120899
+# <풀이>
+def solution(array):
+    return [max(array), array.index(max(array))]
