@@ -1281,3 +1281,15 @@ def solution(s1, s2):
 # <풀이>
 def solution(array):
     return [max(array), array.index(max(array))]
+
+# <문제 - 편지>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120898
+# <풀이 1>
+def solution(message):
+    answer = 0
+    for i in range(len(message)):
+        answer += 1
+    return answer * 2
+# <풀이 2>
+def solution(message):
+    return len(message)*2
