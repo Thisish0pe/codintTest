@@ -1332,3 +1332,8 @@ def solution(my_string):
         else:
             answer += i.upper()
     return answer
+
+# < 문제 - 두 수의 합 >
+#
+# < 풀이 >
+result = num1+num2
