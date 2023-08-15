@@ -1348,3 +1348,9 @@ def solution(cipher, code):
 # <풀이>
 def solution(num1, num2):
     return num1 - num2
+
+# <문제 - 두 수의 곱>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120804
+# <풀이>
+def solution(num1, num2):
+    return num1 * num2
