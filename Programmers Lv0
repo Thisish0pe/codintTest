@@ -1360,3 +1360,9 @@ def solution(num1, num2):
 # <풀이>
 def solution(num1, num2):
     return num1 // num2
+
+# <문제 - 두 수의 나눗셈>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120806
+# <풀이>
+def solution(num1, num2):
+    return int((num1 / num2) * 1000)
