@@ -1372,3 +1372,19 @@ def solution(num1, num2):
 # <풀이>
 def solution(num1, num2):
     return num1 + num2
+
+# <문제 - 분수의 덧셈>
+# https://school.programmers.co.kr/learn/courses/30/lessons/120808
+# <풀이>
+import math
+
+def solution(numer1, denom1, numer2, denom2):
+    b = denom1 * denom2
+    a = (numer1 * denom2) + (numer2 * denom1)
+    
+    gcd=math.gcd(a,b)
+    a = a // gcd
+    b = b // gcd
+    
+    answer = [a, b]
+    return answer
